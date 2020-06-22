@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<body>
+
+    <script>
+            
+          function computerPlay() {
+          let elm = ['rock', 'paper', 'Scissor'];
+          let rdm = Math.floor(Math.random() * 3);
+          let pc_choice = elm[rdm];
+          return pc_choice;
+      }
+
+
+      function playRound(playerSelection, computerSelection) {
+        playerSelection = playerSelection.toLowerCase();
+
+        if ((playerSelection == 'rock') && (computerSelection == 'paper')) {
+            return result = "You Lose! paper beats rock"
+        }
+
+        else if ((playerSelection == 'rock') && (computerSelection == 'scissors')) {
+            return result = "You Won! rock beats scissors"
+        }
+        else if ((playerSelection == 'rock') && (computerSelection == 'rock')) {
+            return result = "It's a tie!"
+        }
+        else if ((playerSelection == 'paper') && (computerSelection == 'rock')) {
+            return result = "You Won! paper beats rock"
+        }
+        else if ((playerSelection == 'paper') && (computerSelection == 'scissors')) {
+            return result = "You Lose! scissors beats paper"
+        }
+        else if ((playerSelection == 'paper') && (computerSelection == 'paper')) {
+            return result = "It's a tie!"
+        }
+        else if ((playerSelection == 'scissors') && (computerSelection == 'rock')) {
+            return result = "You Lose! rock beats scissors"
+        }
+        else if ((playerSelection == 'scissors') && (computerSelection == 'paper')) {
+            return result = "You Won! scissors beats paper"
+        }
+        else if ((playerSelection == 'scissors') && (computerSelection == 'scissors')) {
+            return result == "It's a tie!"
+        }
+      }
+
+    </script>
+
+
+
+</body>
