@@ -46,34 +46,23 @@
         function game() {
 
         
-        let i;
-        for (i = 0; i < 5; i++) {  
+        for (let i = 0; i < 5; i++) {  
 
             let playerSelection = prompt("Choose your weapon: ");
+            playerSelection = playerSelection.toLowerCase();
 
             while (playerSelection != 'rock' && playerSelection != 'paper' && playerSelection != 'scissors') {
-                playerSelection = playerSelection.toLowerCase();
                 alert('It must be Rock, Paper or Scissors');
-            
                 playerSelection = prompt("Choose your weapon: ");
+                playerSelection = playerSelection.toLowerCase();
             }
 
-
             let computerSelection = computerPlay();
-                   
+       
             let result = playRound(playerSelection, computerSelection);
 
-            console.log(result);
-            
-                        
+            console.log(result);               
         }
-
-        function result(result) {
-
-        }
-
-        
-             
         }
 
 
