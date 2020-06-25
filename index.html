@@ -2,6 +2,8 @@
 <body>
 
     <script>
+
+ //Assining a random variable for the computer to play
             
           function computerPlay() {
           let elm = ['rock', 'paper', 'scissors'];
@@ -10,6 +12,7 @@
           return pc_choice;
         }
 
+//The game core
 
       function playRound(playerSelection, computerSelection) {  
 
@@ -43,9 +46,10 @@
         }
         }
 
+//Get an input from player, mix it with the computer play value and the game core 
+
         function game() {
 
-        
         for (let i = 0; i < 5; i++) {  
 
             let playerSelection = prompt("Choose your weapon: ");
