@@ -1,78 +1,33 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
 <body>
+    <div id="background">
+    <div id = "game">
+    <h1>Rock Paper Scissors</h1>
+    
+    <button class="button" id="rock">Rock</button> 
+    <button class="button" id="paper">Paper</button> 
+    <button class="button" id="scissors">Scissors</button> 
+    
+    <div id="scorescreen">
 
-    <script>
+    <p id="scoreText">Score Board:</p>
 
- //Assining a random variable for the computer to play
-            
-          function computerPlay() {
-          let elm = ['rock', 'paper', 'scissors'];
-          let rdm = Math.floor(Math.random() * 3);
-          let pc_choice = elm[rdm];
-          return pc_choice;
-        }
+    <div id="results">Let's Play!</div>
 
-//The game core
-
-      function playRound(playerSelection, computerSelection) {  
-
-        if ((playerSelection == 'rock') && (computerSelection == 'paper')) {
-            return result = "You Lose! paper beats rock"
-        }
-
-        else if ((playerSelection == 'rock') && (computerSelection == 'scissors')) {
-            return result = "You Won! Rock beats Scissors"
-        }
-        else if ((playerSelection == 'rock') && (computerSelection == 'rock')) {
-            return result = "It's a tie!"
-        }
-        else if ((playerSelection == 'paper') && (computerSelection == 'rock')) {
-            return result = "You Won! Paper beats Rock"
-        }
-        else if ((playerSelection == 'paper') && (computerSelection == 'scissors')) {
-            return result = "You Lose! Scissors beats Paper"
-        }
-        else if ((playerSelection == 'paper') && (computerSelection == 'paper')) {
-            return result = "It's a tie!"
-        }
-        else if ((playerSelection == 'scissors') && (computerSelection == 'rock')) {
-            return result = "You Lose! Rock beats Scissors"
-        }
-        else if ((playerSelection == 'scissors') && (computerSelection == 'paper')) {
-            return result = "You Won! Scissors beats Paper"
-        }
-        else if ((playerSelection == 'scissors') && (computerSelection == 'scissors')) {
-            return result == "It's a tie!"
-        }
-        }
-
-//Get an input from player, mix it with the computer play value and the game core 
-
-        function game() {
-
-        for (let i = 0; i < 5; i++) {  
-
-            let playerSelection = prompt("Choose your weapon: ");
-            playerSelection = playerSelection.toLowerCase();
-
-            while (playerSelection != 'rock' && playerSelection != 'paper' && playerSelection != 'scissors') {
-                alert('It must be Rock, Paper or Scissors');
-                playerSelection = prompt("Choose your weapon: ");
-                playerSelection = playerSelection.toLowerCase();
-            }
-
-            let computerSelection = computerPlay();
-       
-            let result = playRound(playerSelection, computerSelection);
-
-            console.log(result);               
-        }
-        }
+    <div id="scoreBoard"></div>
+    </div>
+    </div>
+    </div>
 
 
-
-    </script>
-
-
-
+    <script src="index.js"></script>
 </body>
+</html>
